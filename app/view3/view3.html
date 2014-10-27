@@ -1,0 +1,58 @@
+<div class="container">
+    <h1 class="right"> <i class="glyphicon glyphicon-book glyphicon-book-small"></i> MY BOOK COLLECTION <small>by Julian Waimann Ale</small></h1>
+    <div class="color-swatches">
+        <div class="color-swatch brand-primary full">
+            <p class="category-name-full right">Architecture
+            <i class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal" rel="tooltip" data-placement="right" title="Add a new book"></i>
+            </p>
+        </div>
+    </div>
+    <div class="bs-callout bs-callout-warning">
+        <div class="row row-centered">
+            <div class="col-xs-3 center">
+                <img src="https://covers.openlibrary.org/b/id/192501-M.jpg">
+            </div>
+            <div class="col-xs-8">
+            <h2>Patterns of Enterprise Application Architecture <small> - Martin Fowler</small></h2>
+            <p>
+                <span class="label label-primary">Software</span>
+                <span class="label label-success">Software Architecture</span>
+                <span class="label label-info">Patterns</span>
+                <br>
+                <div class="justified">
+                    <strong>Description</strong>
+                    The practice of enterprise application development has benefited from the emergence of many new enabling technologies. Multi-tiered object-oriented platforms, such as Java and .NET, have become commonplace. These new tools and technologies are capable of building powerful applications, but they are not easily implemented.
+                </div>
+                <br>
+                Addison-Wesley Professional -
+                ISBN: 0321127420 -
+                560 pages
+                <br>
+                <h3 class="right"><a target="_blank"  href="https://www.dropbox.com/s/ive3cmm2q1wasdo/Patterns%20of%20Enterprise%20Application%20Architecture%20-%20Martin%20Fowler.pdf?dl=0"><span class="label label-default">READ ONLINE</span></a></h3>
+
+            </p>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-sm" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title content-font">Add a new book</h4>
+                </div>
+                <div class="modal-body content-font">
+                    <p>ISBN: <input class="content-font input-width" type="text"></p>
+                </div>
+                <div class="modal-footer content-font">
+                    <button type="button" class="btn btn-default content-font" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary content-font">Load Data</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
+<script>
+    $('#myModal').modal(options)
+</script>
+

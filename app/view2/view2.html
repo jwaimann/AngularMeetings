@@ -1,5 +1,80 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="container">
+    <h1 class="right"> <i class="glyphicon glyphicon-book glyphicon-book-small"></i> MY BOOK COLLECTION <small>by Julian Waimann Ale</small></h1>
+    <hr>
+    <h1 class="section-header">collections</h1>
+    <hr>
+    <div class="color-swatches">
+        <div class="color-swatch brand-primary">
+            <p class="category-name right">Architecture</p>
+        </div>
+        <div class="color-swatch brand-success">
+            <p class="category-name right">Javascript</p>
+        </div>
+        <div class="color-swatch brand-info">
+           <p class="category-name right">WPF</p>
+        </div>
+        <div class="color-swatch brand-warning">
+           <p class="category-name right">C#</p>
+        </div>
+        <div class="color-swatch brand-danger">
+            <p class="category-name right">HTML+CSS</p>
+        </div>
+        <div class="popover-markup">
+            <div class="color-swatch gray trigger"  rel="tooltip" data-placement="right" title="Add a new collection">
+            <div class="category-name center plus"><i class="glyphicon glyphicon-plus trigger"></i></div>
+            </div>
+            <div class="content hide">
+                <div class="form-group">
+                    <input type="text" class="form-control content-font" placeholder="Choose a name">
+                </div>
+                <button type="button" class="btn btn-default btn-danger half" onclick="$('.popover-markup>.trigger').popover('hide');"><i class="glyphicon glyphicon-remove"></i></button>
+                <button type="submit" class="btn btn-default btn-success half trigger"><i class="glyphicon glyphicon-ok"></i></button>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <h1 class="section-header">recent</h1>
+    <hr>
+    <div class="bs-callout bs-callout-warning">
+        <div class="row row-centered">
+            <div class="col-xs-3 center">
+                <img src="https://covers.openlibrary.org/b/id/192501-M.jpg">
+            </div>
+            <div class="col-xs-8">
+            <h2>Patterns of Enterprise Application Architecture <small> - Martin Fowler</small></h2>
+            <p>
+                <span class="label label-primary">Software</span>
+                <span class="label label-success">Software Architecture</span>
+                <span class="label label-info">Patterns</span>
+                <br>
+                <div class="justified">
+                    <strong>Description</strong>
+                    The practice of enterprise application development has benefited from the emergence of many new enabling technologies. Multi-tiered object-oriented platforms, such as Java and .NET, have become commonplace. These new tools and technologies are capable of building powerful applications, but they are not easily implemented.
+                </div>
+                <br>
+                Addison-Wesley Professional -
+                ISBN: 0321127420 -
+                560 pages
+                <br>
+                <h3 class="right"><a target="_blank"  href="https://www.dropbox.com/s/ive3cmm2q1wasdo/Patterns%20of%20Enterprise%20Application%20Architecture%20-%20Martin%20Fowler.pdf?dl=0"><span class="label label-default">READ ONLINE</span></a></h3>
+
+            </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function() {
+        $('.popover-markup>.trigger').popover({
+            html: true,
+            title: function () {
+                return $(this).parent().find('.head').html();
+            },
+            content: function () {
+                return $(this).parent().find('.content').html();
+            }
+        })
+    });
+</script>
+

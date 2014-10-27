@@ -1,5 +1,11 @@
 /* app css stylesheet */
 
+html{
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    background-color: #fdfdfc;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -28,3 +34,189 @@
   content: "";
   padding: 0;
 }
+
+.container{
+    font-family: Raleway;
+}
+
+.content-font{
+    font-family: Raleway;
+}
+
+::-webkit-input-placeholder {
+    font-family: Raleway;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    font-family: Raleway;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    font-family: Raleway;
+}
+
+:-ms-input-placeholder {
+    font-family: Raleway;
+}
+
+.glyphicon-book-big{
+    font-size: 50px;
+}
+
+.glyphicon-book-small{
+    font-size: 23px;
+}
+
+.glyphicon-plus{
+    font-size: 30px;
+}
+
+.middle{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+}
+
+.justified{
+    text-align: justify;
+}
+
+.right{
+    text-align: right;
+}
+
+.bs-callout-danger {
+    border-left-color: #424341;
+}
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 10px solid #424341;
+    background-color: #f5f5f4;
+}
+
+.color-swatches{
+    margin:0 -5px;
+    overflow:hidden
+}
+
+.color-swatch{
+    float:left;
+    width:100px;
+    height:100px;
+    margin:5px 5px;
+}
+
+@media (min-width:768px){
+    .color-swatch{
+        width:140px;
+        height:140px
+    }
+}
+
+.color-swatches .gray-darker{
+    background-color:#222
+}
+
+.color-swatches .gray-dark{
+    background-color:#333
+}
+
+.color-swatches .gray{
+    background-color:#555
+}
+
+.color-swatches .gray-light{
+    background-color:#999
+}
+
+.color-swatches .gray-lighter{
+    background-color:#eee
+}
+
+.color-swatches .brand-primary{
+    background-color:#428bca
+}
+
+.color-swatches .brand-success{
+    background-color:#5cb85c
+}
+
+.color-swatches .brand-warning{
+    background-color:#f0ad4e
+}
+
+.color-swatches .brand-danger{
+    background-color:#d9534f
+}
+
+.color-swatches .brand-info{
+    background-color:#5bc0de
+}
+
+.color-swatches .bs-purple{
+    background-color:#563d7c
+}
+
+.color-swatches .bs-gray{
+    background-color: #424341
+}
+
+.color-swatches .bs-purple-lighter{
+    background-color:#e5e1ea
+}
+
+.category-name{
+    font-size: 20px;
+    color: #f9f9f9;
+    margin-top: 50%;
+}
+
+.category-name-full{
+    font-size: 50px;
+    color: #f9f9f9;
+    margin-top: 5%;
+    margin-right: 2%;
+}
+
+.section-header{
+    color: #424341;
+}
+
+.plus{
+    margin-top: 40%;
+}
+
+.tooltip.right .tooltip-inner{
+    background-color: #555;
+}
+
+.tooltip.right .tooltip-arrow {
+    border-right-color: #555;
+}
+
+.half{
+    width: 48%;
+    display: inline-block;
+}
+.full{
+    width:100%
+}
+
+.input-width{
+    width:85%;
+}
+
+#myModal{
+    top:35%;
+}
+
