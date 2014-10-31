@@ -1,16 +1,27 @@
-<div class="container">
+<div class="container" ng-controller="View3Ctrl">
     <h1 class="right"> <i class="glyphicon glyphicon-book glyphicon-book-small"></i> MY BOOK COLLECTION <small>by Julian Waimann Ale</small></h1>
-    <div class="color-swatches">
+    <div class="color-swatches collection-box">
         <div class="color-swatch brand-primary full">
             <p class="category-name-full right">Architecture
             <i class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal" rel="tooltip" data-placement="right" title="Add a new book"></i>
             </p>
         </div>
     </div>
+    <div class="menu-bar">
+        <form class="navbar-form navbar-right  search-form" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control content-font" placeholder="Search">
+            </div>
+            <i class="glyphicon glyphicon-search glyphicon-search-small"></i>
+            <hr>
+        </form>
+    </div>
+    </div>
+    <div class="container inner-container">
     <div class="bs-callout bs-callout-warning">
         <div class="row row-centered">
             <div class="col-xs-3 center">
-                <img src="https://covers.openlibrary.org/b/id/192501-M.jpg">
+                <img src="http://covers.openlibrary.org/b/isbn/0321127420-M.jpg">
             </div>
             <div class="col-xs-8">
             <h2>Patterns of Enterprise Application Architecture <small> - Martin Fowler</small></h2>
@@ -42,17 +53,48 @@
                     <h4 class="modal-title content-font">Add a new book</h4>
                 </div>
                 <div class="modal-body content-font">
-                    <p>ISBN: <input class="content-font input-width" type="text"></p>
+                    <p>ISBN: <input class="content-font input-width" type="text" ng-model="isbn"></p>
                 </div>
                 <div class="modal-footer content-font">
                     <button type="button" class="btn btn-default content-font" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary content-font">Load Data</button>
+                    <button type="button" class="btn btn-primary content-font" data-toggle="modal" data-target="#myModal2" ng-click="getBook()" >Load Data</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Book Data</h4>
+                </div>
+                <div class="modal-body">
+                    Title: <input class="content-font full" type="text" ng-model="book.volumeInfo.title">
+                    Author/s: <input class="content-font full" type="text" ng-model="book.volumeInfo.authors[0]">
+                    Publisher: <input class="content-font full" type="text" ng-model="book.volumeInfo.publisher" >
+                    ISBN: <input class="content-font full" type="text" ng-model="book.volumeInfo.industryIdentifiers[1].identifier">
+                    Pages: <input class="content-font full" type="text" ng-model="book.volumeInfo.pageCount">
+                    Description: <textarea class="content-font full" ng-model="book.volumeInfo.description"/>
+                    Big cover URL: <input class="content-font full" type="text" ng-model="book.cover_l">
+                    Medium cover URL: <input class="content-font full" type="text" ng-model="book.cover_m">
+                    Small cover URL: <input class="content-font full" type="text" ng-model="book.cover_s">
+                    Categories: <input class="content-font full" type="text" ng-model="book.volumeInfo.categories">
+                    Read Online URL: <input class="content-font full" type="text">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default content-font" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary content-font">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 </div>
+
 <script>
-    $('#myModal').modal(options)
+    //$('#myModal').modal();
 </script>
 
